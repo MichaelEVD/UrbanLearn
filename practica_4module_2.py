@@ -1,4 +1,4 @@
-from practica_4module import selecion_sort,booble_sort,insersion_sort
+from practica_4module import selecion_sort, booble_sort, insersion_sort
 
 list_1 = [4, 6, 2, 8, 3, 7, 9]
 list_2 = [4, 6, 2, 8, 3, 7, 9, 1, 5, 10]

@@ -7,7 +7,7 @@ def booble_sort(ls):
             if ls[i] > ls[i+1]:
                 ls[i],ls[i+1] = ls[i+1],ls[i]
                 snapped = True
-
+    return ls
 
 booble_sort(nums)
 print(nums)
@@ -19,6 +19,7 @@ def selecion_sort(ls): # сортировка выбором
             if ls[j] < ls[lowest]:
                 lowest = j
         ls[i],ls[lowest] = ls[lowest],ls[i]
+    return ls
 
 
 selecion_sort(nums)
