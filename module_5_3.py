@@ -6,8 +6,8 @@ class House:
     def __str__(self):
         return f'Название:, {self.name}, кол-во этажей:,{self.number_of_floors}'
 
-    def __len__(self):
-        return self.number_of_floors
+    # def __len__(self):
+    #     return self.number_of_floors
 
     def __eq__(self, other):
         if not isinstance(other,int) and not isinstance(other,House):
