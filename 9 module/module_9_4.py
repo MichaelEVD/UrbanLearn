@@ -11,7 +11,7 @@ def get_advanced_writer(file_name):
     return write_everything
 
 write = get_advanced_writer('example.txt')
-write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
+write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'],('Питер', 'Москва','Челябинск'))
 
 from random import choice
 class MysticBall:
