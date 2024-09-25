@@ -1,12 +1,17 @@
+
 def is_prime(func):
-    def simp_or_comp(*args):
+    def wrapper(*args):
         a = func(*args)
-        if a % 2 == 0 :
-            print('Составное')
-        else:
+        flag = 0
+        for i in range(2,a):
+            if a % i == 0:
+                flag += 1
+        if flag == 0:
             print('Простое')
+        else:
+            print('Составное')
         return a
-    return simp_or_comp
+    return wrapper
 @is_prime
 def sum_three(*args):
     sum_numb = sum(args)
