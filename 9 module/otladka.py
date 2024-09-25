@@ -3,7 +3,7 @@ def is_prime(func):
     def wrapper(*args):
         a = func(*args)
         flag = 0
-        for i in range(2,a):
+        for i in range(2,a//2):
             if a % i == 0:
                 flag += 1
         if flag == 0:
@@ -20,5 +20,3 @@ def sum_three(*args):
 
 result = sum_three(2, 3, 6)
 print(result)
-
-
