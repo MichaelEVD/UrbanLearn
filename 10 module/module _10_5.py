@@ -20,7 +20,7 @@ filenames = [f'./file {number}.txt' for number in range(1, 5)]
 # end_process = datetime.now()
 # print(end_process - start_process)
 
-# многопроцессорный вызов функции
+# многопроцессный вызов функции
 if __name__ == '__main__':
     start_process = datetime.now()
     with multiprocessing.Pool(processes=4) as pool:
