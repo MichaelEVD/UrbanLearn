@@ -1,22 +1,17 @@
 import inspect
 import sys
-from pprint import pprint
 
-def introspection_info(atribut):
-    info = []
-    info.append(type(atribut))
-    info.append(callable(atribut))
-    info.append(isinstance(atribut,int))
-    info.append(sys.path)
-    info.append(inspect.getmodule(introspection_info))
-    info.append(dir(atribut))
-    return info
+def introspection_info(object):
+    result = {'type': type(object), 'attributes': [], 'methods': [], 'module': inspect.getmodule(object)}
+    for obj in dir(object):
+        if callable(getattr(object, obj)):
+            result['methods'].append(obj)
+        else:
+            result['attributes'].append(obj)
+    return result
 
-obj = 'Слово'
-odj_info = introspection_info(obj)
-
-for i in odj_info:
-    pprint(i)
+info = introspection_info('Слово')
+print(info)
 
 
 
