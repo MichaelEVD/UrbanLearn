@@ -1,5 +1,5 @@
 import inspect
-import sys
+
 
 def introspection_info(object):
     result = {'type': type(object), 'attributes': [], 'methods': [], 'module': inspect.getmodule(object)}
