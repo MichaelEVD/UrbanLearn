@@ -14,6 +14,8 @@ class Runner:
     def __str__(self):
         return self.name
 class RunnerTest(unittest.TestCase):
+    is_frozen = False
+    @unittest.skipIf(is_frozen ,"Тесты в этом кейсе заморожены")
     def test_walk(self):
         te_wa = Runner('Petya')
         for i in range(10):
