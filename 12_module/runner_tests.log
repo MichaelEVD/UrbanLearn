@@ -1,14 +1,14 @@
-2024-10-25 23:48:45,922 | WARNING | Неверный тип данных для объекта Runner
+2024-10-25 23:56:13,586 | WARNING | Неверный тип данных для объекта Runner
 Traceback (most recent call last):
-  File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 66, in test_run
+  File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 65, in test_run
     te_r = Runner(1, 10)
            ^^^^^^^^^^^^^
   File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 9, in __init__
     raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
 TypeError: Имя может быть только строкой, передано int
-2024-10-25 23:48:45,923 | WARNING | Неверная скорость для Runner
+2024-10-25 23:56:13,587 | WARNING | Неверная скорость для Runner
 Traceback (most recent call last):
-  File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 56, in test_walk
+  File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 55, in test_walk
     te_wa = Runner('John', -20)
             ^^^^^^^^^^^^^^^^^^^
   File "C:\Users\Admin\PycharmProjects\UrbanLearn\12_module\module_12_4.py", line 14, in __init__
