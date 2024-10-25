@@ -62,7 +62,7 @@ class RunnerTest(unittest.TestCase):
 
     def test_run(self):
         try:
-            te_r = Runner(1, 10)
+            te_r = Runner(1)
             for i in range(10):
                 te_r.run()
                 logging.info(f'"test_run" выполнен успешно')
