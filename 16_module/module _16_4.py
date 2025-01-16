@@ -1,9 +1,10 @@
-from fastapi import FastAPI, Path,HTTPException
+from fastapi import FastAPI, Path, HTTPException
 from typing import Annotated
 from pydantic import BaseModel
 
-app = FastAPI
+app = FastAPI()
 users = []
+
 
 class User(BaseModel):
     id: int
@@ -38,10 +39,10 @@ async def update_user_list(user_id: Annotated[int, Path(gt=0)],
         raise HTTPException(status_code=404, detail="User was not found")
 
 @app.delete('/user/{user_id}')
-async def delete_user(user_id: str):
+async def delete_user(user_id: int):
     try:
         for user in users:
-            if user.id ==user_id:
+            if user.id == user_id:
                 users.remove(user_id)
                 return user
     except IndexError:
