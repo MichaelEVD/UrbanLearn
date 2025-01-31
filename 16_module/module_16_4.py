@@ -5,6 +5,9 @@ from pydantic import BaseModel
 app = FastAPI()
 users = []
 
+@app.get("/")
+async def wellcom():
+    return f'Приветствую тебя, пользователь!'
 
 class User(BaseModel):
     id: int
